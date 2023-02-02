@@ -9,28 +9,45 @@ import XCTest
 @testable import FizzBuzz
 
 class FizzBuzzTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    func test_print_numbers() {
+        expect(number: 1, toPrint: "1")
+        expect(number: 2, toPrint: "2")
+        expect(number: 13, toPrint: "13")
+        expect(number: 23, toPrint: "23")
+        expect(number: 4, toPrint: "4")
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func test_print_fizzWhenNumberIsMultipleOfThree() {
+        expect(number: 3, toPrint: "Fizz")
+        expect(number: 6, toPrint: "Fizz")
+        expect(number: 9, toPrint: "Fizz")
+        expect(number: 12, toPrint: "Fizz")
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func test_print_buzzWhenNumberIsMultipleOfFive() {
+        expect(number: 5, toPrint: "Buzz")
+        expect(number: 25, toPrint: "Buzz")
+        expect(number: 10, toPrint: "Buzz")
+        expect(number: 20, toPrint: "Buzz")
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func test_print_fizzBuzzWhenNumberIsMultipleOfFifteen() {
+        expect(number: 15, toPrint: "FizzBuzz")
+        expect(number: 30, toPrint: "FizzBuzz")
+        expect(number: 45, toPrint: "FizzBuzz")
+        expect(number: 60, toPrint: "FizzBuzz")
+    }
+    
+    func test_print(){
+        for number in 1...100 {
+            print("\(FizzBuzzParser.parse(number))")
         }
     }
-
+    
+    // MARK: Helpers
+    
+    private func expect(number: Int, toPrint result: String, file: StaticString = #file, line: UInt = #line) {
+        XCTAssertEqual(FizzBuzzParser.parse(number), result, file: file, line: line)
+    }
 }

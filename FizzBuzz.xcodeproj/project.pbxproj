@@ -11,6 +11,7 @@
 		20297B57298B5121008AA00A /* FizzBuzz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20297B4C298B5121008AA00A /* FizzBuzz.framework */; };
 		20297B5C298B5121008AA00A /* FizzBuzzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20297B5B298B5121008AA00A /* FizzBuzzTests.swift */; };
 		20297B5D298B5121008AA00A /* FizzBuzz.h in Headers */ = {isa = PBXBuildFile; fileRef = 20297B4F298B5121008AA00A /* FizzBuzz.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20297B67298BA0F8008AA00A /* FizzBuzzParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20297B66298BA0F8008AA00A /* FizzBuzzParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		20297B50298B5121008AA00A /* FizzBuzz.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = FizzBuzz.docc; sourceTree = "<group>"; };
 		20297B56298B5121008AA00A /* FizzBuzzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FizzBuzzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20297B5B298B5121008AA00A /* FizzBuzzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzzTests.swift; sourceTree = "<group>"; };
+		20297B66298BA0F8008AA00A /* FizzBuzzParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzzParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				20297B4F298B5121008AA00A /* FizzBuzz.h */,
 				20297B50298B5121008AA00A /* FizzBuzz.docc */,
+				20297B66298BA0F8008AA00A /* FizzBuzzParser.swift */,
 			);
 			path = FizzBuzz;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20297B51298B5121008AA00A /* FizzBuzz.docc in Sources */,
+				20297B67298BA0F8008AA00A /* FizzBuzzParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +409,7 @@
 		20297B64298B5121008AA00A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X7PX2RYRJL;
@@ -425,6 +430,7 @@
 		20297B65298B5121008AA00A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X7PX2RYRJL;
