@@ -39,12 +39,6 @@ class FizzBuzzTests: XCTestCase {
         expect(number: 60, toPrint: "FizzBuzz")
     }
     
-    func test_print(){
-        for number in 1...100 {
-            print("\(FizzBuzzParser.parse(number))")
-        }
-    }
-    
     // MARK: Helpers
     
     private func expect(number: Int, toPrint result: String, file: StaticString = #file, line: UInt = #line) {
